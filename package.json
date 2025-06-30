@@ -1,0 +1,57 @@
+{
+  "name": "task-management-app",
+  "version": "1.0.0",
+  "description": "Aplikacja webowa do zarządzania zadaniami - projekt akademicki",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "cd frontend && npm start",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install"
+  },
+  "keywords": [
+    "task-management",
+    "react",
+    "nodejs",
+    "mongodb",
+    "scrum",
+    "agile",
+    "academic-project"
+  ],
+  "author": "Patryk Jaksender <patryk@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.0",
+    "mongoose": "^7.0.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "helmet": "^6.0.0",
+    "morgan": "^1.10.0",
+    "express-validator": "^6.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "jest": "^29.0.0",
+    "supertest": "^6.3.0",
+    "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DippsoN/task-management-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DippsoN/task-management-app/issues"
+  },
+  "homepage": "https://github.com/DippsoN/task-management-app#readme"
+}
